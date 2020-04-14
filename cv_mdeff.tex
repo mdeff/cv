@@ -1,43 +1,13 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.3 (29/10/16)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com) with modifications by:
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \firstname{John} % Your first name
 \familyname{Smith} % Your last name
@@ -54,42 +24,11 @@
 %\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 \quote{"A witty and playful quotation" - John Smith}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	COVER LETTER
-%----------------------------------------------------------------------------------------
-
-% To remove the cover letter, comment out this entire block
-
-\clearpage
-
-\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-\date{\today} % Letter date
-\opening{Dear Sir or Madam,} % Opening greeting
-\closing{Sincerely yours,} % Closing phrase
-\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-
-\makelettertitle % Print letter title
-
-\lipsum[1-2] % Dummy text
-\lipsum[4] % Dummy text
-
-\makeletterclosing % Print letter signature
-
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	CURRICULUM VITAE
-%----------------------------------------------------------------------------------------
-
-\makecvtitle % Print the CV title
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\makecvtitle
 
 \section{Education}
 
@@ -101,10 +40,6 @@
 \cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
 \cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
 \cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
 
 \section{Experience}
 
@@ -128,11 +63,7 @@ Detailed achievements:
 \item Broke the office record for number of kitten pictures in cubicle
 \end{itemize}}
 
-%------------------------------------------------
-
 \cventry{2011--2012}{Summer Intern}{\textsc{Lehman Brothers}}{Los Angeles}{}{Rated "truly distinctive" for Analytical Skills and Teamwork.}
-
-%------------------------------------------------
 
 \subsection{Miscellaneous}
 
@@ -140,18 +71,10 @@ Detailed achievements:
 
 \cventry{2009--2010}{Computer Repair Specialist}{Buy More}{Burbank}{}{Worked in the Nerd Herd and helped to solve computer problems. Allowed me to become expert in all forms of martial arts and weaponry.}
 
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-
 \section{Awards}
 
 \cvitem{2011}{School of Business Postgraduate Scholarship}
 \cvitem{2010}{Top Achiever Award -- Commerce}
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
 
 \section{Computer skills}
 
@@ -159,18 +82,10 @@ Detailed achievements:
 \cvitem{Intermediate}{\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
 \cvitem{Advanced}{Computer Hardware and Support}
 
-%----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
 \section{Communication Skills}
 
 \cvitem{2010}{Oral Presentation at the California Business Conference}
 \cvitem{2009}{Poster at the Annual Business Conference in Oregon}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
-%----------------------------------------------------------------------------------------
 
 \section{Languages}
 
@@ -178,18 +93,12 @@ Detailed achievements:
 \cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
 \cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
 
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-
 \section{Interests}
 
-\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
 \cvlistdoubleitem{Piano}{Chess}
 \cvlistdoubleitem{Cooking}{Dancing}
 \cvlistitem{Running}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
