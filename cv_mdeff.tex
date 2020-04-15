@@ -13,8 +13,13 @@
 
 %\name{Michaël Defferrard}{(mdeff)}
 \name{Michaël}{Defferrard}
-\quote{``I make machines learn on unstructured data.''}
 %\title{Curriculum Vitae}
+%\title{mdeff}
+
+% about / summary
+%\quote{``I make machines learn on unstructured data.''}
+\quote{``I make machines learn on data structured by graphs.''}
+
 %\address{EPFL}{Switzerland}
 %\phone{+41 00 000 00 00}  % or \phone[mobile]
 \email{michael.defferrard@epfl.ch}
@@ -23,6 +28,9 @@
 \social[github]{mdeff}
 \social[twitter]{m\_deff}
 %\extrainfo{\href{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}{Scholar}}
+\newcommand*{\cvurl}{\url{deff.ch/cv_mdeff.pdf}}
+%\newcommand*{\cvurl}{\href{deff.ch/cv_mdeff.pdf}{deff.ch/cv\_mdeff.pdf}}
+\extrainfo{updated \today, latest at \cvurl}
 %\photo[70pt][0.4pt]{picture}
 
 %-------------------------------------------------------------------------------
@@ -33,44 +41,46 @@
 
 \section{Education}
 
-\cventry{2011--2012}{Masters of Commerce}{The University of California}{Berkeley}{\textit{GPA -- 8.0}}{First Class Honours}  % Arguments not required can be left empty
-\cventry{2007--2010}{Bachelor of Business Studies}{The University of California}{Berkeley}{\textit{GPA -- 7.5}}{Specialized in Commerce}
-
-\section{Masters Thesis}
-
-\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
-\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
-\cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+\cventry{2015 -- present}{PhD candidate}{EPFL}{Lausanne CH}{}{%
+%Research on machine learning and data structured by graphs. Advisor: Pierre Vandergheynst.}
+\begin{itemize}
+	\item Research on machine learning and data structured by graphs
+	\item Advisor: Pierre Vandergheynst
+\end{itemize}
+}
+\cventry{2012 -- 2015}{MSc Electrical Engineering}{EPFL}{Lausanne CH}{\textit{GPA 96\%}}{%
+\begin{itemize}
+	%\item Focus in Information Technologies
+	\item Minor in Computational Neuroscience
+\end{itemize}
+}
+\cventry{2009 -- 2012}{BASc Electrical Engineering}{EIA-FR}{Fribourg CH}{\textit{GPA 98\%}}{%
+%\begin{itemize}
+%	\item French and German bilingual studies
+%	\item Phonak Communications award for excellence
+%\end{itemize}
+}
+\cventry{2010 -- 2011}{ERASMUS}{Fachhochschule München}{Germany}{}{}
+%\cventry{2005 -- 2009}{Federal Certificate of Capacity}{EPAI}{Fribourg CH}{\textit{GPA 96\%}}{%
+%\begin{itemize}
+%	\item Professional Technical Maturity Certificate
+%	\item Award for excellence from Union Patronale du Canton de Fribourg (UPCF)
+%\end{itemize}
+%}
 
 \section{Experience}
 
-\subsection{Vocational}
-
-\cventry{2012--Present}{1\textsuperscript{st} Year Analyst}{\textsc{Lehman Brothers}}{Los Angeles}{}{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.
-\newline{}\newline{}
-Detailed achievements:
-\begin{itemize}
-\item Learned how to make amazing coffee
-\item Finally determined the reason for \textsc{PC LOAD LETTER}:
-\begin{itemize}
-\item Paper jam
-\item Software issues:
-\begin{itemize}
-\item Word not sending the correct data to printer
-\item Windows trying to print in letter format
-\end{itemize}
-\item Coffee spilled inside printer
-\end{itemize}
-\item Broke the office record for number of kitten pictures in cubicle
-\end{itemize}}
-
-\cventry{2011--2012}{Summer Intern}{\textsc{Lehman Brothers}}{Los Angeles}{}{Rated "truly distinctive" for Analytical Skills and Teamwork.}
-
-\subsection{Miscellaneous}
-
-\cventry{2010--2011}{}{}{}{}{Spent some time finding myself. This was a courageous endeavour that didn't have a job title. It was quite important to my overall development though so I'm adding it to my CV. Also it explains the gap in my otherwise stellar CV.}
-
-\cventry{2009--2010}{Computer Repair Specialist}{Buy More}{Burbank}{}{Worked in the Nerd Herd and helped to solve computer problems. Allowed me to become expert in all forms of martial arts and weaponry.}
+% \cventry[1em]{2000 -- 2010}{degree/title}{institution}{localization}{grade}{comment}
+\cventry{Feb 2014 -- present}{Research Assistant}{EPFL}{}{}{%
+Doctoral assistant (and previously project student) at the LTS2 laboratory led by Prof. Pierre Vandergheynst.
+Research on machine learning and data structured by graphs.
+Besides research, I manage and co-teach a graduate course on data science with networks.
+}
+\cventry{2011 -- 2015}{Software Engineer}{Infoteam}{}{}{%
+Software engineer in the Energy R\&D team.
+My main contribution was to port a core product of the company, a control-command tool for energy distribution and production called StreamX, to embedded systems.
+My work enabled the company to close its largest contract to date.
+}
 
 \section{Awards}
 
@@ -101,5 +111,23 @@ Detailed achievements:
 \cvlistdoubleitem{Piano}{Chess}
 \cvlistdoubleitem{Cooking}{Dancing}
 \cvlistitem{Running}
+
+\section{Features}
+% from /usr/share/texmf-dist/tex/latex/moderncv/moderncv.cls
+
+% \section{title}
+% \subsection{title}
+
+% \cventry[1em]{2000--2010}{degree/title}{institution}{localization}{grade}{comment}
+% \cvitem[1em]{header}{text}
+% \cvitemwithcomment[1em]{header}{text}{comment}
+% \cvdoubleitem[1em]{header1}{text1}{header2}{text2}
+% \cvlistitem{item}
+% \cvlistdoubleitem{item1}{item2}
+
+% \begin{cvcolumns}
+% 	\cvcolumn[0.4]{head}{content}
+% 	\cvcolumn[0.4]{head}{content}
+% \end{cvcolumns}
 
 \end{document}
