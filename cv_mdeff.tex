@@ -1,11 +1,11 @@
-\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,a4paper,sans]{moderncv}
+% todo: better font
 
-\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{casual}  % casual, classic, oldstyle, banking
+\moderncvcolor{blue}  % blue, orange, green, red, purple, grey, black
 
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage[scale=0.75]{geometry}  % reduce margins
+\setlength{\hintscolumnwidth}{2.3cm}  % width of the dates column
 
 %-------------------------------------------------------------------------------
 
@@ -16,22 +16,35 @@
 %\title{Curriculum Vitae}
 %\title{mdeff}
 
-% about / summary
 %\quote{``I make machines learn on unstructured data.''}
-\quote{``I make machines learn on data structured by graphs.''}
+%\quote{``I make machines learn on data structured by graphs.''}
+\quote{``I make machines learn; better with graphs.''}
+%\quote{``I make machines learn, and see graphs everywhere.''}
 
 %\address{EPFL}{Switzerland}
 %\phone{+41 00 000 00 00}  % or \phone[mobile]
 \email{michael.defferrard@epfl.ch}
+%\email{michael@deff.ch}
 \homepage{deff.ch}
 \social[linkedin]{mdeff}
 \social[github]{mdeff}
 \social[twitter]{m\_deff}
-%\extrainfo{\href{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}{Scholar}}
-\newcommand*{\cvurl}{\url{deff.ch/cv_mdeff.pdf}}
+%\social[scholar]{Ztj2-gUAAAAJ}
+%\social[youtube]{}
+%\extrainfo{\href{https://scholar.google.com/citations?user=Ztj2-gUAAAAJ}{Scholar}}
+%\newcommand*{\cvurl}{\url{deff.ch/cv_mdeff.pdf}}
+%\newcommand*{\cvurl}{\url{deff.ch/cv.pdf}}
 %\newcommand*{\cvurl}{\href{deff.ch/cv_mdeff.pdf}{deff.ch/cv\_mdeff.pdf}}
+\newcommand*{\cvurl}{\href{deff.ch/cv.pdf}{deff.ch/cv.pdf}}
+%\extrainfo{updated \today, latest at \cvurl}
+\def\today{\ifcase\month\or  % month and year
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+  \space \number\year}
 \extrainfo{updated \today, latest at \cvurl}
 %\photo[70pt][0.4pt]{picture}
+
+\newcommand*{\spacing}{0.5em}  % add some whitespace
 
 %-------------------------------------------------------------------------------
 
@@ -39,30 +52,33 @@
 
 \makecvtitle
 
+%\section{Objectives}  % About, Key Skills, Summary
+
 \section{Education}
 
-\cventry{2015 -- present}{PhD candidate}{EPFL}{Lausanne CH}{}{%
+\cventry[\spacing]{2015 -- present}{PhD candidate}{EPFL}{Lausanne CH}{}{%
 %Research on machine learning and data structured by graphs. Advisor: Pierre Vandergheynst.}
 \begin{itemize}
-	\item Research on machine learning and data structured by graphs
+	\item Research: deep learning and graphs
+		% geometric deep learning
 	\item Advisor: Pierre Vandergheynst
 \end{itemize}
 }
-\cventry{2012 -- 2015}{MSc Electrical Engineering}{EPFL}{Lausanne CH}{\textit{GPA 96\%}}{%
+\cventry[\spacing]{2012 -- 2015}{MSc Electrical Engineering}{EPFL}{Lausanne CH}{\textit{GPA 96\%}}{%
 \begin{itemize}
 	%\item Focus in Information Technologies
 	\item Minor in Computational Neuroscience
 \end{itemize}
 }
-\cventry{2009 -- 2012}{BASc Electrical Engineering}{EIA-FR}{Fribourg CH}{\textit{GPA 98\%}}{%
+\cventry[\spacing]{2009 -- 2012}{BASc Electrical Engineering}{EIA-FR}{Fribourg CH}{\textit{GPA 98\%}}{%
 %\begin{itemize}
 %	\item French and German bilingual studies
 %	\item Phonak Communications award for excellence
 %\end{itemize}
 }
-\cventry{2010 -- 2011}{ERASMUS}{Fachhochschule München}{Germany}{}{}
-%\cventry{2005 -- 2009}{Federal Certificate of Capacity}{EPAI}{Fribourg CH}{\textit{GPA 96\%}}{%
-%\begin{itemize}
+\cventry[\spacing]{2010 -- 2011}{ERASMUS}{Fachhochschule München}{Germany}{}{}
+%\cventry[\spacing]{2005 -- 2009}{Federal Certificate of Capacity}{EPAI}{Fribourg CH}{\textit{GPA 96\%}}{%
+%\begin[\spacing]{itemize}
 %	\item Professional Technical Maturity Certificate
 %	\item Award for excellence from Union Patronale du Canton de Fribourg (UPCF)
 %\end{itemize}
@@ -70,55 +86,98 @@
 
 \section{Experience}
 
-% \cventry[1em]{2000 -- 2010}{degree/title}{institution}{localization}{grade}{comment}
-\cventry{Feb 2014 -- present}{Research Assistant}{EPFL}{}{}{%
+\cventry[\spacing]{Feb 2014 -- present}{Research Assistant}{EPFL}{}{}{%
 Doctoral assistant (and previously project student) at the LTS2 laboratory led by Prof. Pierre Vandergheynst.
 Research on machine learning and data structured by graphs.
 Besides research, I manage and co-teach a graduate course on data science with networks.
 }
-\cventry{2011 -- 2015}{Software Engineer}{Infoteam}{}{}{%
+\cventry[\spacing]{2011 -- 2015}{Software Engineer}{Infoteam}{}{}{%
 Software engineer in the Energy R\&D team.
 My main contribution was to port a core product of the company, a control-command tool for energy distribution and production called StreamX, to embedded systems.
 My work enabled the company to close its largest contract to date.
 }
 
-\section{Awards}
+\cventry[\spacing]{May -- Aug 2012}{Research Intern}{LBNL}{Berkeley}{}{%
+Bachelor thesis, award for excellence.
+I characterized the performance of a particle detector for the Large Hadron Collider (LHC) at CERN.
+}
 
-\cvitem{2011}{School of Business Postgraduate Scholarship}
-\cvitem{2010}{Top Achiever Award -- Commerce}
+\cventry[\spacing]{2005 -- 2011}{Electronics Specialist}{Meggitt}{Fribourg CH}{}{%
+Apprenticeship and part-time job.
+Production, test, quality assurance, repair, certification and development of sensing systems for the aerospace and energy markets.
+%Required the respect of strict/high quality standards.
+}
 
-\section{Computer skills}
+\section{Publications}  % Selected Publications
 
-\cvitem{Basic}{\textsc{java}, Adobe Illustrator}
-\cvitem{Intermediate}{\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
-\cvitem{Advanced}{Computer Hardware and Support}
+\cvitem{}{Listed at \url{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}.}
+% Is it acceptable to refer to an online source?
 
-\section{Communication Skills}
+\section{Awards}  % Awards, Scholarships, Achievements, Honours
 
-\cvitem{2010}{Oral Presentation at the California Business Conference}
-\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+% todo: more? remove?
+\cvitem{2016, 2017}{Google PhD Fellowship Nominee}
+\cvitem{2014}{Silicon Valley Startup Camp}
+\cvitem{2012}{Award for excellence, Phonak Communications}
+% Par ce prix, Phonak Communications exprime la reconnaissance de l'excellence du travail réalisé lors du projet de Bachelor effectué à l'école d'ingénieurs et d'architectes de Fribourg en été 2012.
+\cvitem{2009}{Award for excellence, Union Patronale du Canton de Fribourg}
+% Best apprentice over all technical professions (state Fribourg).
 
-\section{Languages}
+%\section{Grants}  % Grants, Funding
 
-\cvitemwithcomment{English}{Mothertongue}{}
-\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
-\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+\section{Talks}
 
-\section{Interests}
+% Either here or on website. Boring to repeat.
+% Probably more visible on website.
 
-%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\section{Professional Services}
 
-\cvlistdoubleitem{Piano}{Chess}
-\cvlistdoubleitem{Cooking}{Dancing}
-\cvlistitem{Running}
+\subsection{Events Organization}
+\cvitem{2018}{\href{https://www.crowdai.org/challenges/www-2018-challenge-learning-to-recognize-musical-genre}{Musical Genre Recognition Challenge}, The Web Conference (WWW)}
+\cvitem{2017}{\href{https://osip2017.epfl.ch}{Open Science in Practice Summer School}, EPFL}
+\cvitem{2017, 2018}{\href{https://bmvc2017.london/dlid}{Deep Learning on Irregular Domains Workshop}, BMVC}
 
-\section{Features}
+\subsection{Reviewing Activities}
+%TODO: add all
+\cvitem{}{Transactions on Pattern Analysis and Machine Intelligence (TPAMI)}  % 2017 – 2018
+\cvitem{}{IEEE Transactions on Neural Networks and Learning Systems (TNNLS)}  % 2017
+\cvitem{}{Journal of Selected Topics in Signal Processing (J-STSP)}  % 2016
+
+%\section{Computer skills}
+
+%\section{Communication Skills}
+% writings?
+
+% \section{Languages}
+% \cvitem{French}{Mothertongue}
+% \cvitem{English}{Fluent (C2)}
+% \cvitem{German}{Intermediate (B2)}
+
+\section{Extra-Curricular}  % interests, extra-curricular activities
+
+\cvlistitem{Musician in two bands, playing at the Swiss national championship}
+\cvlistitem{Firefighter officer}
+\cvlistitem{Computing systems and open source enthusiast}
+%\cvlistitem{Interests in entrepreneurship and start-ups}
+
+\section{Online}  % Miscellaneous, Online
+
+\cvitemwithcomment{}{\url{deff.ch}}{Publications, talks, teaching, advizing, software, projects.}
+\cvitemwithcomment{}{\url{github.com/mdeff}}{Open source contributions.}
+\cvitemwithcomment{}{\url{scholar.google.com/citations?user=Ztj2-gUAAAAJ}}{Publications.}
+%\cvitemwithcomment{}{\url{twitter.com/m_deff}}{Thoughts.}
+% orcid, arxiv, zenodo, youtube, linkedin
+
+% \section{Features}
 % from /usr/share/texmf-dist/tex/latex/moderncv/moderncv.cls
 
 % \section{title}
 % \subsection{title}
 
-% \cventry[1em]{2000--2010}{degree/title}{institution}{localization}{grade}{comment}
+% \cventry[\spacing]{2000 -- 2010}{degree/title}{institution}{where}{grade}{%
+% comment
+% }
+
 % \cvitem[1em]{header}{text}
 % \cvitemwithcomment[1em]{header}{text}{comment}
 % \cvdoubleitem[1em]{header1}{text1}{header2}{text2}
