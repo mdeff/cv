@@ -5,40 +5,36 @@
 
 \RequirePackage[backend=biber, url=false, doi=false, isbn=false, style=phys, biblabel=brackets, sorting=ydnt, texencoding=utf8,
 defernumbers=true]{biblatex}
+\RequirePackage[normalem]{ulem}  % for \uline
+\RequirePackage{kvoptions}  % for key-value package options
 
-\RequirePackage[normalem]{ulem} %for \uline
+\DeclareStringOption{authorlastname}  % select entries with author and underline them
+\DeclareStringOption{startyear}  % show recent papers (entries without year are ignored)
+\ProcessKeyvalOptions*
 
 % underline authors which match the given last name
 \DeclareNameFormat{author}{%
-\ifthenelse{\equal{\namepartfamily}{\filterlastname}}%
-    {\uline{\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}}%
-    {\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}%
-\ifthenelse{\value{listcount}<\value{liststop}}%
-    {\addcomma\space}
-    {}}
+	\ifthenelse{\equal{\namepartfamily}{\autopub@authorlastname}}%
+		{\uline{\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}}%
+		{\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}%
+	\ifthenelse{\value{listcount}<\value{liststop}}%
+		{\addcomma\space}
+		{}
+}
 
-% filter to only include items where one author has the give last name
+% only include items where one author match the given last name
 \DeclareBibliographyCategory{byname}
-
 \DeclareIndexNameFormat{byname}{% Test could be refined
-  \ifboolexpr{ test {\ifdefstring{\filterlastname}{#1}}}
-    {\addtocategory{byname}{\thefield{entrykey}}}
-    {}}
+	\ifboolexpr{test {\ifdefstring{\autopub@authorlastname}{#1}}}
+	{\addtocategory{byname}{\thefield{entrykey}}}
+	{}
+}
 
-\defbibcheck{recent}{}
-
-\newcommand{\StartYear}[1]{
-% filter to only include items after the given year
+% only include items more recent than given year
 \defbibcheck{recent}{
-\ifboolexpr{ not test {\iffieldint{year}} or test {\ifnumless{\thefield{year}}{#1}}
+	\ifboolexpr{not test {\iffieldint{year}} or test {\ifnumless{\thefield{year}}{\autopub@startyear}}}
+	{\skipentry}{}
 }
-{\skipentry}
-{}
-}
-}
-
-\newcommand{\Author}[1]{\newcommand{\filterlastname}{#1}}
-
 
 \DeclareBibliographyCategory{relevant}
 
