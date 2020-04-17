@@ -1,9 +1,7 @@
-\NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{arcpubs}[2013/02/07 LaTeX package for to create a list of  publications for Australian Research Council grant applications]
+% most code taken from https://davidpowell.github.io/latex-publication-list.html
 
-\usepackage{textcomp}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{publications}[2020/04/17 LaTeX package to create a list of publications]
 
 \RequirePackage[backend=biber, url=false, doi=false, isbn=false, style=phys, biblabel=brackets, sorting=ydnt, texencoding=utf8,
 defernumbers=true]{biblatex}
@@ -68,18 +66,5 @@ defernumbers=true]{biblatex}
 \newcommand{\showchapters}{\printbibliography[title={Book Chapters}, type=inbook, check=recent, heading=subbibliography]}
 \newcommand{\showarticles}{\printbibliography[title={Journal Articles}, type=article, check=recent, heading=subbibliography]}
 \newcommand{\showproceedings}{\printbibliography[title={Conference Proceedings}, type=inproceedings, check=recent, heading=subbibliography]}
-
-\LoadClass[a4paper,12pt]{article}
-
-% Use San-serif headings
-\usepackage{sectsty}
-\sectionfont{\fontsize{12}{15}\bfseries\selectfont}
-\subsectionfont{\fontsize{12}{15}\selectfont}
-
-
-% minimum margin size is 0.5cm
-\RequirePackage[margin=0.5cm]{geometry}
-
-\pagestyle{empty}
 
 \endinput
