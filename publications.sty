@@ -11,7 +11,7 @@ defernumbers=true]{biblatex}
 % underline authors which match the given last name
 \DeclareNameFormat{author}{%
 \ifthenelse{\equal{\namepartfamily}{\filterlastname}}%
-    {\textbf{\uline{\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}}}%
+    {\uline{\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}}%
     {\ifblank{\namepartgiveni}{}{\namepartgiveni\space}\namepartfamily}%
 \ifthenelse{\value{listcount}<\value{liststop}}%
     {\addcomma\space}
