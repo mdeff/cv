@@ -7,6 +7,9 @@
 \usepackage[scale=0.75]{geometry}  % reduce margins
 \setlength{\hintscolumnwidth}{2.3cm}  % width of the dates column
 
+\usepackage[authorlastname=Defferrard, startyear=2000]{autopub}
+\addbibresource{publications.bib}
+
 %-------------------------------------------------------------------------------
 
 % definition and usage in /usr/share/texmf-dist/tex/latex/moderncv/moderncv.cls
@@ -108,10 +111,22 @@ Production, test, quality assurance, repair, certification and development of se
 %Required the respect of strict/high quality standards.
 }
 
-\section{Publications}  % Selected Publications
+%\section{Publications}  % Selected Publications
+\autopuball
+%\autopubbytype
+%\addtocategory{selected}{fma_dataset}
+%\autopubselected
 
-\cvitem{}{Listed at \url{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}.}
-% Is it acceptable to refer to an online source?
+Listed at \url{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}.
+% todo: add approximate citation counts?
+
+% Alternatives:
+%\cvlistitem{\bibentry{fma_dataset}}
+%\cvlistitem{\fullcite{fma_dataset}}
+
+%\section{Software}
+\autopubsoftware
+% todo: usage metrics? (downloads, stars)
 
 \section{Awards}  % Awards, Scholarships, Achievements, Honours
 
