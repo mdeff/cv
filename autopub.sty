@@ -53,9 +53,12 @@ defernumbers=true]{biblatex}
 % avoid trying to justify text, as this can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
 
-\newcommand{\showbooks}{\printbibliography[title={Books}, type=book, check=recent]}
-\newcommand{\showchapters}{\printbibliography[title={Book Chapters}, type=inbook, check=recent, heading=subbibliography]}
-\newcommand{\showarticles}{\printbibliography[title={Journal Articles}, type=article, check=recent, heading=subbibliography]}
-\newcommand{\showproceedings}{\printbibliography[title={Conference Proceedings}, type=inproceedings, check=recent, heading=subbibliography]}
+\newcommand{\autopubbytype}{
+	\section*{Publications}
+	\printbibliography[title={Books}, type=book, keyword=ownpubs, check=recent, heading=subbibliography]
+	\printbibliography[title={Book Chapters}, type=inbook, keyword=ownpubs, check=recent, heading=subbibliography]
+	\printbibliography[title={Journal Articles}, type=article, keyword=ownpubs, check=recent, heading=subbibliography]
+	\printbibliography[title={Conference Proceedings}, type=inproceedings, keyword=ownpubs, check=recent, heading=subbibliography]
+}
 
 \endinput
