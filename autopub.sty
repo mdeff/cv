@@ -3,8 +3,13 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{publications}[2020/04/17 LaTeX package to create a list of publications]
 
-\RequirePackage[backend=biber, url=false, doi=false, isbn=false, style=phys, biblabel=brackets, sorting=ydnt, texencoding=utf8,
-defernumbers=true]{biblatex}
+\RequirePackage[
+	style=numeric,  % numeric, authoryear, authortitle
+	sorting=ydnt, maxnames=10,
+	url=false, doi=false, isbn=false, eprint=true,
+	backend=biber,
+	defernumbers=true  % for resetnumbers in \printbibliography
+]{biblatex}
 \RequirePackage[normalem]{ulem}  % for \uline
 \RequirePackage{kvoptions}  % for key-value package options
 
@@ -43,6 +48,9 @@ defernumbers=true]{biblatex}
   
 % get rid of the language entry
 \AtEveryBibitem{\clearlist{language}}
+
+% show url of software contributions
+\ExecuteBibliographyOptions[misc]{url=true}
 
 % avoid trying to justify text, as this can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
