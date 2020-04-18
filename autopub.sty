@@ -1,7 +1,9 @@
-% most code taken from https://davidpowell.github.io/latex-publication-list.html
-
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{publications}[2020/04/17 LaTeX package to create a list of publications]
+\ProvidesPackage{autopub}[2020/04/17 LaTeX package to create a list of publications]
+% resources:
+% * https://davidpowell.github.io/latex-publication-list.html
+% * http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf
+% * https://tex.stackexchange.com/questions/65114/biblatex-separating-publications-of-a-specific-author-in-the-bibliography#65145
 
 \RequirePackage[
 	style=numeric,  % numeric, authoryear, authortitle
@@ -45,14 +47,11 @@
 
 % get rid of the annoying word "In:" for the numeric biblatex style
 \renewbibmacro{in:}{}
-  
-% get rid of the language entry
-\AtEveryBibitem{\clearlist{language}}
 
 % show url of software contributions
 \ExecuteBibliographyOptions[misc]{url=true}
 
-% avoid trying to justify text, as this can lead to overfull boxes
+% don't justify text, as it can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
 
 \newcommand{\autopuball}{\printbibliography[title={Publications}, nottype=misc, keyword=ownpubs, check=recent, resetnumbers=true]}
