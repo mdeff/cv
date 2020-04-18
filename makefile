@@ -18,7 +18,6 @@ clean:
 	rm -f *.{aux,bbl,blg,fdb_latexmk,fls,log,out,lof,dvi}
 	rm -f *.{bcf,run.xml}
 	rm -f *.{toc,snm,nav}
-	rm -f *.cls
 	rm -f *.gz*
 	rm -f *.pdfpc
 
