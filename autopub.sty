@@ -53,6 +53,7 @@ defernumbers=true]{biblatex}
 % avoid trying to justify text, as this can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
 
+\newcommand{\autopuball}{\printbibliography[title={Publications}, nottype=misc, keyword=ownpubs, check=recent, resetnumbers=true]}
 \newcommand{\autopubbytype}{
 	\section*{Publications}
 	\printbibliography[title={Books}, type=book, keyword=ownpubs, check=recent, heading=subbibliography]
@@ -60,5 +61,6 @@ defernumbers=true]{biblatex}
 	\printbibliography[title={Journal Articles}, type=article, keyword=ownpubs, check=recent, heading=subbibliography]
 	\printbibliography[title={Conference Proceedings}, type=inproceedings, keyword=ownpubs, check=recent, heading=subbibliography]
 }
+\newcommand{\autopubsoftware}{\printbibliography[title={Software}, type=misc, keyword=ownpubs, resetnumbers=true]}
 
 \endinput
