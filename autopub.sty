@@ -12,6 +12,10 @@ defernumbers=true]{biblatex}
 \DeclareStringOption{startyear}  % show recent papers (entries without year are ignored)
 \ProcessKeyvalOptions*
 
+\DeclareBibliographyCategory{selected}
+% add a selected publication with \addtocategory{selected}{<key>}
+% print selected publications with \autopubselected
+
 % underline authors which match the given last name
 \DeclareNameFormat{author}{%
 	\ifthenelse{\equal{\namepartfamily}{\autopub@authorlastname}}%
@@ -34,16 +38,6 @@ defernumbers=true]{biblatex}
 	{\skipentry}{}
 }
 
-\DeclareBibliographyCategory{relevant}
-
-% Inform biblatex that all relevant citations deserve
-% special treatment, while all others do not
-\AtEveryBibitem{%
-  \ifcategory{relevant}%
-    {* }%
-    {}%
-}
-
 % get rid of the annoying word "In:" for the numeric biblatex style
 \renewbibmacro{in:}{}
   
@@ -62,5 +56,6 @@ defernumbers=true]{biblatex}
 	\printbibliography[title={Conference Proceedings}, type=inproceedings, keyword=ownpubs, check=recent, heading=subbibliography]
 }
 \newcommand{\autopubsoftware}{\printbibliography[title={Software}, type=misc, keyword=ownpubs, resetnumbers=true]}
+\newcommand{\autopubselected}{\printbibliography[title={Selected Publications}, category=selected, resetnumbers=true]}
 
 \endinput
