@@ -23,12 +23,10 @@ defernumbers=true]{biblatex}
 }
 
 % only include items where one author match the given last name
-\DeclareBibliographyCategory{byname}
-\DeclareIndexNameFormat{byname}{% Test could be refined
-	\ifboolexpr{test {\ifdefstring{\autopub@authorlastname}{#1}}}
-	{\addtocategory{byname}{\thefield{entrykey}}}
-	{}
-}
+\DeclareSourcemap{\maps[datatype=bibtex]{\map{
+	\step[fieldsource=author, match=\autopub@authorlastname, final]
+	\step[fieldset=keywords, fieldvalue=ownpubs]
+}}}
 
 % only include items more recent than given year
 \defbibcheck{recent}{
@@ -51,9 +49,6 @@ defernumbers=true]{biblatex}
   
 % get rid of the language entry
 \AtEveryBibitem{\clearlist{language}}
-
-\AtDataInput{%
-  \indexnames[byname][1-99]{author}}
 
 % avoid trying to justify text, as this can lead to overfull boxes
 \renewcommand*{\bibfont}{\raggedright}
