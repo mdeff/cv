@@ -1,0 +1,29 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{social}[2020/04/20 LaTeX package to add more social links to moderncv]
+% ressources:
+% * https://tex.stackexchange.com/questions/464832/adding-google-scholar-and-researchgate-profile-to-the-preamble-in-moderncv
+% * https://github.com/xdanaux/moderncv/pull/71/files
+
+\RequirePackage{fontawesome}
+\RequirePackage{academicons}
+
+\newcommand*{\orcidsocialsymbol}{{\small\aiOrcid}~}
+\newcommand*{\arxivsocialsymbol}{{\small\aiarXiv}~}
+\newcommand*{\googlescholarsocialsymbol}{{\small\aiGoogleScholar}~}
+\newcommand*{\semanticscholarsocialsymbol}{{\small\aiSemanticScholar}~}
+\newcommand*{\stackoverflowsocialsymbol}{{\small\faicon{stack-overflow}}~}
+\newcommand*{\facebooksocialsymbol}{{\small\faicon{facebook}}~}
+
+\RenewDocumentCommand{\social}{O{}O{}m}{
+  \ifthenelse{\equal{#2}{}}
+    {
+      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\href{https://www.linkedin.com/in/#3}{#3}}}{}
+      \ifthenelse{\equal{#1}{twitter}}{\collectionadd[twitter]{socials}{\protect\href{https://www.twitter.com/#3}{#3}}}{}
+      \ifthenelse{\equal{#1}{github}}{\collectionadd[github]{socials}{\protect\href{https://www.github.com/#3}{#3}}}{}
+      \ifthenelse{\equal{#1}{orcid}}{\collectionadd[orcid]{socials}{\protect\href{https://orcid.org/#3}{#3}}}{}
+      \ifthenelse{\equal{#1}{arxiv}}{\collectionadd[arxiv]{socials}{\protect\href{https://arxiv.org/a/#3.html}{#3}}}{}
+      \ifthenelse{\equal{#1}{googlescholar}}{\collectionadd[googlescholar]{socials}{\protect\href{https://scholar.google.ch/citations?user=#3}{#3}}}{}
+    }
+    {\collectionadd[#1]{socials}{\protect\href{#3}{#2}}}}
+
+\endinput

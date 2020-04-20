@@ -1,11 +1,20 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
-% todo: better font
-
 \moderncvstyle{casual}  % casual, classic, oldstyle, banking
 \moderncvcolor{blue}  % blue, orange, green, red, purple, grey, black
+% todo: better font
 
+%pdflatex
 %\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}  % default since texlive 2018
+
+%xelatex and lualatex
+%\usepackage{fontspec}
+%\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont{Linux Libertine O}
+%\setsansfont{Linux Biolinum O}
+
+\usepackage{social}
+% requires academicons which requires fontspec which requires XeLaTeX or LuaLaTeX
 
 \usepackage[scale=0.75]{geometry}  % reduce margins
 \setlength{\hintscolumnwidth}{2.3cm}  % width of the dates column
@@ -42,9 +51,11 @@
 %\email{michael@deff.ch}
 \homepage{deff.ch}
 \social[linkedin]{mdeff}
-\social[github]{mdeff}
 \social[twitter]{m\_deff}
-%\social[scholar]{Ztj2-gUAAAAJ}
+\social[github]{mdeff}
+\social[googlescholar]{Ztj2-gUAAAAJ}
+\social[orcid]{0000-0002-6028-9024}
+\social[arxiv]{0000-0002-6028-9024}
 %\social[youtube]{}
 %\extrainfo{\href{https://scholar.google.com/citations?user=Ztj2-gUAAAAJ}{Scholar}}
 \def\today{\ifcase\month\or  % month and year

@@ -7,7 +7,7 @@ STY = $(wildcard *.sty)
 all: $(PDF)
 
 %.pdf: %.tex $(BIB) $(BST) $(STY)
-	latexmk -pdf $<
+	latexmk -lualatex $<
 
 clean:
 	git clean -Xdf $(addprefix -e !, $(PDF))
