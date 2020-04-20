@@ -13,6 +13,9 @@
 \usepackage[authorlastname=Defferrard, startyear=2000]{autopub}
 \addbibresource{publications.bib}
 
+%\newcommand{\httpslink}[1]{\href{https://#1}{#1}}  % better footnote, worse inline
+\newcommand{\httpslink}[1]{\href{https://#1}{\texttt{#1}}}
+
 %-------------------------------------------------------------------------------
 
 % definition and usage in /usr/share/texmf-dist/tex/latex/moderncv/moderncv.cls
@@ -44,16 +47,11 @@
 %\social[scholar]{Ztj2-gUAAAAJ}
 %\social[youtube]{}
 %\extrainfo{\href{https://scholar.google.com/citations?user=Ztj2-gUAAAAJ}{Scholar}}
-%\newcommand*{\cvurl}{\url{deff.ch/cv_mdeff.pdf}}
-%\newcommand*{\cvurl}{\url{deff.ch/cv.pdf}}
-%\newcommand*{\cvurl}{\href{deff.ch/cv_mdeff.pdf}{deff.ch/cv\_mdeff.pdf}}
-\newcommand*{\cvurl}{\href{deff.ch/cv.pdf}{deff.ch/cv.pdf}}
-%\extrainfo{updated \today, latest at \cvurl}
 \def\today{\ifcase\month\or  % month and year
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
   \space \number\year}
-\extrainfo{updated \today, latest at \cvurl}
+\extrainfo{updated \today, latest at \httpslink{deff.ch/cv.pdf}}
 %\photo[70pt][0.4pt]{picture}
 
 \newcommand*{\spacing}{0.5em}  % add some whitespace
@@ -129,7 +127,7 @@ Production, test, quality assurance, repair, certification and development of se
 %Required the respect of strict/high quality standards.
 }
 
-\section{Publications \hfill \small\url{scholar.google.ch/citations?user=Ztj2-gUAAAAJ}}
+\section{Publications \hfill \small \httpslink{scholar.google.ch/citations?user=Ztj2-gUAAAAJ}}
 \autopuball
 %\autopubbytype
 % Google Scholar h-index of 5, 2000+ citations.
@@ -139,9 +137,9 @@ Production, test, quality assurance, repair, certification and development of se
 %\addtocategory{selected}{fma_dataset}
 %\autopubselected
 
-\section{Software \hfill \small \url{github.com/mdeff}}
+\section{Software \hfill \small \httpslink{github.com/mdeff}}
 \autopubsoftware
-More open-source contributions (e.g., paper implementations, teaching materials, contributions to the python scientific stack and jupyter) at \url{github.com/mdeff}.
+More open-source contributions (e.g., paper implementations, teaching materials, contributions to the python scientific stack and jupyter) at \httpslink{github.com/mdeff}.
 % todo: usage metrics? (downloads, stars)
 
 \section{Awards}  % Awards, Scholarships, Achievements, Honours, Fellowships, Recognition
@@ -179,11 +177,11 @@ More open-source contributions (e.g., paper implementations, teaching materials,
 
 %\cvitem{Publications}{7 papers, x patents, Google Scholar h-index of 5, 2000+ citations.}
 %\cvitem{Software}{Maintainer of 2 scientific Python packages, downloaded x+ times. Contributor of many others.}
-\cvitem{Talks}{I gave 20+ talks. List with slides (and some videos) at \url{deff.ch}.}
+\cvitem{Talks}{I gave 20+ talks. List with slides (and some videos) at \httpslink{deff.ch}.}
 % TODO: ORCID could list publications, talks, etc.
-\cvitem{Teaching}{I co-taught 8 courses around Machine Learning, Networks, and Data Science, in various roles (TAing, lecturing, teaching team \& student management, curriculum design) and forms (university class, workshop, summer school). List with roles and resources at \url{deff.ch}.}
+\cvitem{Teaching}{I co-taught 8 courses around Machine Learning, Networks, and Data Science, in various roles (TAing, lecturing, teaching team \& student management, curriculum design) and forms (university class, workshop, summer school). List with roles and resources at \httpslink{deff.ch}.}
 % Supervision, Advizing, Mentoring
-\cvitem{Supervision}{I supervised 15+ students (MSc theses, semester projects, internships). List of students with project title and outputs at \url{deff.ch}.}
+\cvitem{Supervision}{I supervised 15+ students (MSc theses, semester projects, internships). List of students with project title and outputs at \httpslink{deff.ch}.}
 % leadership: supervision, organization, teaching
 \cvitem{Collaborations}{I enjoy to collaborate with domain experts. So far in Neuroscience, Cosmology, Protein Design \& Imaging, Weather \& Climate Sciences.}
 % with applications downstream, with math upstream
@@ -214,10 +212,10 @@ More open-source contributions (e.g., paper implementations, teaching materials,
 %\section{Online}  % Miscellaneous, Online
 % only useful for short form without full listings (those links are otherwise prominently mentioned already)
 % but shall I maintain a short form?
-%\cvitemwithcomment{}{\url{deff.ch}}{Publications, talks, teaching, advizing, software, projects.}
-%\cvitemwithcomment{}{\url{github.com/mdeff}}{Open source contributions.}
-%\cvitemwithcomment{}{\url{scholar.google.com/citations?user=Ztj2-gUAAAAJ}}{Publications.}
-%\cvitemwithcomment{}{\url{twitter.com/m_deff}}{Thoughts.}
+%\cvitemwithcomment{}{\httpslink{deff.ch}}{Publications, talks, teaching, advizing, software, projects.}
+%\cvitemwithcomment{}{\httpslink{github.com/mdeff}}{Open source contributions.}
+%\cvitemwithcomment{}{\httpslink{scholar.google.com/citations?user=Ztj2-gUAAAAJ}}{Publications.}
+%\cvitemwithcomment{}{\httpslink{twitter.com/m_deff}}{Thoughts.}
 % orcid, arxiv, zenodo, youtube, linkedin
 
 
