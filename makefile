@@ -6,16 +6,11 @@ STY = $(wildcard *.sty)
 
 all: $(PDF)
 
-%.pdf: %.tex $(BIB) $(STY) $(BST)
+%.pdf: %.tex $(BIB) $(BST) $(STY)
 	latexmk -pdf $<
 
 clean:
-	#git clean -Xdf
-	rm -f *.{aux,bbl,blg,fdb_latexmk,fls,log,out,lof,dvi}
-	rm -f *.{bcf,run.xml}
-	rm -f *.{toc,snm,nav}
-	rm -f *.gz*
-	rm -f *.pdfpc
+	git clean -Xdf $(addprefix -e !, $(PDF))
 
 cleanall: clean
 	rm -f $(PDF)
