@@ -4,6 +4,9 @@
 \moderncvstyle{casual}  % casual, classic, oldstyle, banking
 \moderncvcolor{blue}  % blue, orange, green, red, purple, grey, black
 
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+
 \usepackage[scale=0.75]{geometry}  % reduce margins
 \setlength{\hintscolumnwidth}{2.3cm}  % width of the dates column
 
@@ -23,6 +26,9 @@
 %\quote{``I make machines learn on data structured by graphs.''}
 \quote{``I make machines learn; better with graphs.''}
 %\quote{``I make machines learn, and see graphs everywhere.''}
+\quote{``Research on Machine Learning and Graphs.''}
+% All things graphs
+% My research interests revolve around ML, graphs, geometry. I enjoy most to create solutions that solve real problems.
 
 %\address{EPFL}{Switzerland}
 %\phone{+41 00 000 00 00}  % or \phone[mobile]
@@ -55,23 +61,31 @@
 
 \makecvtitle
 
-%\section{Objectives}  % About, Key Skills, Summary
+%\section{Objective}  % Objective(s), About, Summary
+% My research interests / Life goals
+% todo: as the blue quote?
+
+% (Key) Skills (computer skills, communication skills (writings?)
 
 \section{Education}
+% content: credentials
 
 \cventry[\spacing]{2015 -- present}{PhD candidate}{EPFL}{Lausanne CH}{}{%
 %Research on machine learning and data structured by graphs. Advisor: Pierre Vandergheynst.}
-\begin{itemize}
-	\item Research: deep learning and graphs
-		% geometric deep learning
-	\item Advisor: Pierre Vandergheynst
-\end{itemize}
+Advized by Pierre Vandergheynst.
+% \begin{itemize}
+% 	\item Research: deep learning and graphs
+% 		% geometric deep learning
+% 	\item Advisor: Pierre Vandergheynst
+% \end{itemize}
 }
 \cventry[\spacing]{2012 -- 2015}{MSc Electrical Engineering}{EPFL}{Lausanne CH}{\textit{GPA 96\%}}{%
-\begin{itemize}
-	%\item Focus in Information Technologies
-	\item Minor in Computational Neuroscience
-\end{itemize}
+Minor in Computational Neuroscience.
+% \begin{itemize}
+% 	%\item Focus in Information Technologies
+% 	\item Minor in Computational Neuroscience
+% 	%\item Thesis: Structured Auto-Encoder with application to Music Genre Recognition. Advisors: Xavier Bresson, Johan Paratte, Pierre Vandergheynst.
+% \end{itemize}
 }
 \cventry[\spacing]{2009 -- 2012}{BASc Electrical Engineering}{EIA-FR}{Fribourg CH}{\textit{GPA 98\%}}{%
 %\begin{itemize}
@@ -88,6 +102,7 @@
 %}
 
 \section{Experience}
+% content: what I did
 
 \cventry[\spacing]{Feb 2014 -- present}{Research Assistant}{EPFL}{}{}{%
 Doctoral assistant (and previously project student) at the LTS2 laboratory led by Prof. Pierre Vandergheynst.
@@ -111,13 +126,16 @@ Production, test, quality assurance, repair, certification and development of se
 %Required the respect of strict/high quality standards.
 }
 
-%\section{Publications}  % Selected Publications
+%\section{Publications}  % Selected Publications, Scientific Output
+% publications, patents
 \autopuball
 %\autopubbytype
 %\addtocategory{selected}{fma_dataset}
 %\autopubselected
 
-Listed at \url{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}.
+%Google Scholar h-index of 5, 2000+ citations.
+List with statistics at \url{scholar.google.ch/citations?user=Ztj2-gUAAAAJ}.
+% Full list at
 % todo: add approximate citation counts?
 
 % Alternatives:
@@ -126,65 +144,95 @@ Listed at \url{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}.
 
 %\section{Software}
 \autopubsoftware
+More open-source contributions (e.g., paper implementations, teaching materials, contributions to the python scientific stack and jupyter) at \url{github.com/mdeff}.
 % todo: usage metrics? (downloads, stars)
 
-\section{Awards}  % Awards, Scholarships, Achievements, Honours
+\section{Awards}  % Awards, Scholarships, Achievements, Honours, Fellowships, Recognition
 
 % todo: more? remove?
+\cvitem{2020}{ICLR spotlight talk for \cite{deepsphere_iclr}}
 \cvitem{2016, 2017}{Google PhD Fellowship Nominee}
 \cvitem{2014}{Silicon Valley Startup Camp}
-\cvitem{2012}{Award for excellence, Phonak Communications}
+\cvitem{2012}{Award for excellence (BSc thesis), Phonak Communications}
 % Par ce prix, Phonak Communications exprime la reconnaissance de l'excellence du travail réalisé lors du projet de Bachelor effectué à l'école d'ingénieurs et d'architectes de Fribourg en été 2012.
 \cvitem{2009}{Award for excellence, Union Patronale du Canton de Fribourg}
 % Best apprentice over all technical professions (state Fribourg).
 
 %\section{Grants}  % Grants, Funding
 
-\section{Talks}
+% No successful grants yet.
 
-% Either here or on website. Boring to repeat.
-% Probably more visible on website.
+%\section{Talks}
 
-\section{Professional Services}
+% List here or on website. Boring to repeat.
+% Probably more visible on website, with links to resources.
+% Mention in Miscellaneous.
 
-\subsection{Events Organization}
-\cvitem{2018}{\href{https://www.crowdai.org/challenges/www-2018-challenge-learning-to-recognize-musical-genre}{Musical Genre Recognition Challenge}, The Web Conference (WWW)}
-\cvitem{2017}{\href{https://osip2017.epfl.ch}{Open Science in Practice Summer School}, EPFL}
-\cvitem{2017, 2018}{\href{https://bmvc2017.london/dlid}{Deep Learning on Irregular Domains Workshop}, BMVC}
+%\section{Teaching}
 
-\subsection{Reviewing Activities}
-%TODO: add all
-\cvitem{}{IEEE Transactions on Medical Imaging (TMI)}  % 2019
-\cvitem{}{IEEE Transactions on Image Processing (TIP)}  % 2019
-\cvitem{}{Transactions on Pattern Analysis and Machine Intelligence (TPAMI)}  % 2017
-\cvitem{}{IEEE Transactions on Neural Networks and Learning Systems (TNNLS)}  % 2017
-\cvitem{}{IEEE GlobalSIP}  % 2017
-\cvitem{}{Journal of Selected Topics in Signal Processing (J-STSP)}  % 2016
+% Same as talks.
 
-%\section{Computer skills}
-
-%\section{Communication Skills}
-% writings?
+%\section{Professional Services}
+% reviewer, editor, chair, organizer?, thesis committees?
 
 % \section{Languages}
 % \cvitem{French}{Mothertongue}
 % \cvitem{English}{Fluent (C2)}
 % \cvitem{German}{Intermediate (B2)}
 
+\section{Miscellaneous}  % things not worth their own section
+% or Scientific Output, with full list of publications online only
+% todo: what should be promoted to its own section, and what should stay here?
+%	* own section if listed with full details
+%	* here if summarized
+% then, what should be listed in full details, what should be summarized?
+% Ideally most things are on website. To avoid overlap, CV has history (experience), credentials (education, awards), and summary (statistics) (pubs, teaching, advizing, etc.).
+
+%\cvitem{Publications}{7 papers, x patents, Google Scholar h-index of 5, 2000+ citations.}
+%\cvitem{Software}{Maintainer of 2 scientific Python packages, downloaded x+ times. Contributor of many others.}
+\cvitem{Talks}{I gave 20+ talks. List with slides (and some videos) at \url{deff.ch}.}
+\cvitem{Teaching}{I co-taught 8 courses around Machine Learning, Networks, and Data Science, in various roles (TAing, lecturing, teaching team \& student management, curriculum design) and forms (university class, workshop, summer school). List with roles and resources at \url{deff.ch}.}
+% Supervision, Advizing, Mentoring
+\cvitem{Supervision}{I supervised 15+ students (MSc theses, semester projects, internships). List of students with project title and outputs at \url{deff.ch}.}
+% leadership: supervision, organization, teaching
+\cvitem{Collaborations}{I enjoy to collaborate with domain experts. So far in Neuroscience, Cosmology, Protein Design \& Imaging, Weather \& Climate Sciences.}
+% with applications downstream, with math upstream
+\cvitem{Organization}{
+	\begin{itemize}
+		\item \href{https://www.crowdai.org/challenges/www-2018-challenge-learning-to-recognize-musical-genre}{Musical Genre Recognition Challenge}, The Web Conference (WWW), 2018
+		\item \href{https://osip2017.epfl.ch}{Open Science in Practice Summer School}, EPFL, 2017
+		\item\href{https://bmvc2017.london/dlid}{Deep Learning on Irregular Domains Workshop}, BMVC, 2017 \& 2018
+	\end{itemize}
+}
+\cvitem{Reviewing}{
+	IEEE Transactions on Medical Imaging (TMI),  % 2019
+	IEEE Transactions on Image Processing (TIP),  % 2019
+	IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI),  % 2017
+	IEEE Transactions on Neural Networks and Learning Systems (TNNLS),  % 2017
+	IEEE Global Conference on Signal and Information Processing (GlobalSIP),  % 2017
+	IEEE Journal of Selected Topics in Signal Processing (J-STSP)  % 2016
+}
+
 \section{Extra-Curricular}  % interests, extra-curricular activities
 
-\cvlistitem{Musician in two bands, playing at the Swiss national championship}
-\cvlistitem{Firefighter officer}
-\cvlistitem{Computing systems and open source enthusiast}
+\cvlistitem{Brass Band musician, playing in two bands at the Swiss national championship}
+\cvlistitem{Firefighter officer in the local militia}
+\cvlistitem{Computing systems and open-source enthusiast}
 %\cvlistitem{Interests in entrepreneurship and start-ups}
 
-\section{Online}  % Miscellaneous, Online
+%\section{Online}  % Miscellaneous, Online
+% only useful for short form without full listings (those links are otherwise prominently mentioned already)
+% but shall I maintain a short form?
 
-\cvitemwithcomment{}{\url{deff.ch}}{Publications, talks, teaching, advizing, software, projects.}
-\cvitemwithcomment{}{\url{github.com/mdeff}}{Open source contributions.}
-\cvitemwithcomment{}{\url{scholar.google.com/citations?user=Ztj2-gUAAAAJ}}{Publications.}
+%\cvitemwithcomment{}{\url{deff.ch}}{Publications, talks, teaching, advizing, software, projects.}
+%\cvitemwithcomment{}{\url{github.com/mdeff}}{Open source contributions.}
+%\cvitemwithcomment{}{\url{scholar.google.com/citations?user=Ztj2-gUAAAAJ}}{Publications.}
 %\cvitemwithcomment{}{\url{twitter.com/m_deff}}{Thoughts.}
 % orcid, arxiv, zenodo, youtube, linkedin
+
+
+% ---------------------------------------------------------
+
 
 % \section{Features}
 % from /usr/share/texmf-dist/tex/latex/moderncv/moderncv.cls
