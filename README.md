@@ -10,4 +10,4 @@ The document is based on the [moderncv] class, with a custom package ([`autopub.
 make
 ```
 
-PDF available at <https://deff.ch/cv_mdeff.pdf>.
+PDF available at <https://deff.ch/cv.pdf>.
