@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{casual}  % casual, classic, oldstyle, banking
 \moderncvcolor{blue}  % blue, orange, green, red, purple, grey, black
-% todo: better font
+% TODO: try other fonts
 
 %pdflatex
 %\usepackage[T1]{fontenc}
@@ -25,6 +25,7 @@
 
 %\newcommand{\httpslink}[1]{\href{https://#1}{#1}}  % better footnote, worse inline
 \newcommand{\httpslink}[1]{\href{https://#1}{\texttt{#1}}}
+\newcommand*{\spacing}{0.5em}  % add some whitespace
 
 %-------------------------------------------------------------------------------
 
@@ -34,6 +35,7 @@
 \name{Michaël}{Defferrard}
 %\title{Curriculum Vitae}
 %\title{mdeff}
+%\photo[70pt][0.4pt]{picture}
 
 %\quote{``I make machines learn on unstructured data.''}
 %\quote{``I make machines learn on data structured by graphs.''}
@@ -73,9 +75,6 @@
   July\or August\or September\or October\or November\or December\fi
   \space \number\year}
 \extrainfo{updated \today, latest at \httpslink{deff.ch/cv.pdf}}
-%\photo[70pt][0.4pt]{picture}
-
-\newcommand*{\spacing}{0.5em}  % add some whitespace
 
 %-------------------------------------------------------------------------------
 
@@ -85,23 +84,26 @@
 
 %\section{Objective}  % Objective(s), About, Summary, Profile
 % My research interests / Life goals
-% todo: as the blue quote?
+% TODO: here or as the \quote{}? Better in a research statement / cover letter?
 
 % (Key) Skills (computer skills, technical skills, communication skills (writings?)
 
 \section{Education}
 % content: credentials
 
-\cventry[\spacing]{2015 -- present}{PhD candidate}{EPFL}{Lausanne CH}{}{%
+\cventry[\spacing]{2015 -- present}{PhD candidate}{École Polytechnique Fédérale de Lausanne (EPFL)}{}{}{%
 %Research on machine learning and data structured by graphs. Advisor: Pierre Vandergheynst.}
-Advized by Pierre Vandergheynst.
+Advized by Prof.\ Pierre Vandergheynst.
 % \begin{itemize}
 % 	\item Research: deep learning and graphs
 % 		% geometric deep learning
+% 	\item Thesis: XXX
 % 	\item Advisor: Pierre Vandergheynst
 % \end{itemize}
 }
-\cventry[\spacing]{2012 -- 2015}{MSc Electrical Engineering}{EPFL}{Lausanne CH}{\textit{GPA 96\%}}{%
+\cventry[\spacing]{2012 -- 2015}{MSc Electrical Engineering}{EPFL}{}{\textit{GPA 96\%}}{%
+%Signal processing and information technologies.
+%Courses on signal processing, data analysis, machine learning.
 Minor in Computational Neuroscience.
 % \begin{itemize}
 % 	%\item Focus in Information Technologies
@@ -109,15 +111,16 @@ Minor in Computational Neuroscience.
 % 	%\item Thesis: Structured Auto-Encoder with application to Music Genre Recognition. Advisors: Xavier Bresson, Johan Paratte, Pierre Vandergheynst.
 % \end{itemize}
 }
-\cventry[\spacing]{2009 -- 2012}{BASc Electrical Engineering}{EIA-FR}{Fribourg CH}{\textit{GPA 98\%}}{%
+\cventry[\spacing]{2009 -- 2012}{BASc Electrical Engineering}{École d'Ingénieurs de Fribourg (EIA-FR)}{}{\textit{GPA 98\%}}{%
 %\begin{itemize}
 %	\item French and German bilingual studies
 %	\item Phonak Communications award for excellence
 %\end{itemize}
 }
-\cventry[\spacing]{2010 -- 2011}{ERASMUS}{Fachhochschule München}{Germany}{}{}
-%\cventry[\spacing]{2005 -- 2009}{Federal Certificate of Capacity}{EPAI}{Fribourg CH}{\textit{GPA 96\%}}{%
-%\begin[\spacing]{itemize}
+\cventry[\spacing]{2010 -- 2011}{Exchange student (ERASMUS)}{Fachhochschule München}{}{}{}
+%\cventry[\spacing]{2005 -- 2009}{Federal Certificate of Capacity in Electronics}{EPAI}{Fribourg CH}{\textit{GPA 96\%}}{%
+%% Ecole professionnelle artisanale et industrielle de Fribourg
+%\begin{itemize}
 %	\item Professional Technical Maturity Certificate
 %	\item Award for excellence from Union Patronale du Canton de Fribourg (UPCF)
 %\end{itemize}
@@ -125,23 +128,24 @@ Minor in Computational Neuroscience.
 
 \section{Experience}
 % content: what I did
+% could also group Education and Experience, under Positions and Education
 
-\cventry[\spacing]{Feb 2014 -- present}{Research Assistant}{EPFL}{}{}{%
-Doctoral assistant (and previously project student) at the LTS2 laboratory led by Prof. Pierre Vandergheynst.
+\cventry[\spacing]{2014 -- present}{Research Assistant}{École Polytechnique Fédérale de Lausanne (EPFL)}{}{}{%
+Doctoral assistant (and previously project student) at the LTS2 laboratory led by Prof.\ Pierre Vandergheynst.
 Research on machine learning and data structured by graphs.
-Besides research, I manage and co-teach a graduate course on data science with networks.
+I published papers in top-tier venues, supervised students, gave talks, taught courses, developed software.
+%Besides research, I manage and co-teach a graduate course on data science with networks.
 }
-\cventry[\spacing]{2011 -- 2015}{Software Engineer}{Infoteam}{}{}{%
-Software engineer in the Energy R\&D team.
-My main contribution was to port a core product of the company, a control-command tool for energy distribution and production called StreamX, to embedded systems.
+\cventry[\spacing]{2011 -- 2015}{Software Engineer}{Infoteam}{Givisiez CH}{}{%
+Part-time job in the Energy R\&D team.
+I ported a core product of the company, a control-command tool for energy distribution and production, %called StreamX,
+to embedded systems.
 My work enabled the company to close its largest contract to date.
 }
-
-\cventry[\spacing]{May -- Aug 2012}{Research Intern}{LBNL}{Berkeley}{}{%
-Bachelor thesis, award for excellence.
-I characterized the performance of a particle detector for the Large Hadron Collider (LHC) at CERN.
+\cventry[\spacing]{May -- Aug 2012}{Research Intern}{Lawrence Berkeley National Laboratory (LBNL)}{}{}{%
+%Bachelor thesis. %award for excellence.
+I characterized the performance of a new particle detector for the ATLAS experiment at the CERN's Large Hadron Collider (LHC).
 }
-
 \cventry[\spacing]{2005 -- 2011}{Electronics Specialist}{Meggitt}{Fribourg CH}{}{%
 Apprenticeship and part-time job.
 Production, test, quality assurance, repair, certification and development of sensing systems for the aerospace and energy markets.
@@ -161,15 +165,15 @@ Production, test, quality assurance, repair, certification and development of se
 \section{Software \hfill \small \httpslink{github.com/mdeff}}
 \autopubsoftware
 More open-source contributions (e.g., paper implementations, teaching materials, contributions to the python scientific stack and jupyter) at \httpslink{github.com/mdeff}.
-% todo: usage metrics? (downloads, stars)
+% TODO: usage metrics? (downloads, stars)
 
-\section{Awards}  % Awards, Scholarships, Achievements, Honours, Fellowships, Recognition
+\section{Awards}  % Awards, Scholarships, Achievements, Accomplishments, Honours, Fellowships, Recognition
 \cvitem{2020}{ICLR spotlight talk for \cite{deepsphere_iclr}}
 \cvitem{2016, 2017}{Google PhD Fellowship Nominee}
 \cvitem{2014}{Silicon Valley Startup Camp (selected and funded)}
 \cvitem{2012}{Award for excellence (BSc thesis), Phonak Communications}
-% Par ce prix, Phonak Communications exprime la reconnaissance de l'excellence du travail réalisé lors du projet de Bachelor effectué à l'école d'ingénieurs et d'architectes de Fribourg en été 2012.
-\cvitem{2009}{Award for excellence (best GPA), Union Patronale du Canton de Fribourg}
+% Sept 2012, Par ce prix, Phonak Communications exprime la reconnaissance de l'excellence du travail réalisé lors du projet de Bachelor effectué à l'école d'ingénieurs et d'architectes de Fribourg en été 2012.
+\cvitem{2009}{Award for excellence (highest GPA), Union Patronale du Canton de Fribourg}
 % Best apprentice over all technical professions (state Fribourg).
 
 %\section{Grants}  % Grants, Funding
@@ -184,27 +188,28 @@ More open-source contributions (e.g., paper implementations, teaching materials,
 % Same as talks.
 
 % \section{Languages}
+% Not really useful for academic CV, as English is the expected working language.
 % \cvitem{French}{Mothertongue}
 % \cvitem{English}{Fluent (C2)}
 % \cvitem{German}{Intermediate (B2)}
 
 \section{Miscellaneous}  % things not worth their own section
 % or Scientific Output, with full list of publications online only
-% todo: what should be promoted to its own section, and what should stay here?
+% TODO: what should be promoted to its own section, and what should stay here?
 %	* own section if listed with full details
 %	* here if summarized
 % then, what should be listed in full details, what should be summarized?
-% Ideally most things are on website. To avoid overlap, CV has history (experience), credentials (education, awards), and summary (statistics) (pubs, teaching, advizing, etc.).
+% Ideally most things are on website. To avoid overlap, CV has history (experience), credentials (education, awards), and summary (statistics) (pubs, teaching, supervision, etc.).
 
 %\cvitem{Publications}{7 papers, x patents, Google Scholar h-index of 5, 2000+ citations.}
-%\cvitem{Software}{Maintainer of 2 scientific Python packages, downloaded x+ times. Contributor of many others.}
+%\cvitem{Software}{Maintainer of 2 scientific Python packages, downloaded x+ times. Contributor to many others.}
 \cvitem{Talks}{I gave 20+ talks. List with slides (and some videos) at \httpslink{deff.ch}.}
 % TODO: ORCID could list publications, talks, etc.
 \cvitem{Teaching}{I co-taught 8 courses around Machine Learning, Networks, and Data Science, in various roles (TAing, lecturing, teaching team \& student management, curriculum design) and forms (university class, workshop, summer school). List with roles and resources at \httpslink{deff.ch}.}
-% Supervision, Advizing, Mentoring
+% Supervision (managed), Advizing (gave advices), Mentoring (informal?)
 \cvitem{Supervision}{I supervised 15+ students (MSc theses, semester projects, internships). List of students with project title and outputs at \httpslink{deff.ch}.}
 % leadership: supervision, organization, teaching
-\cvitem{Collaborations}{I enjoy to collaborate with domain experts. So far in Neuroscience, Cosmology, Protein Design \& Imaging, Weather \& Climate Sciences.}
+\cvitem{Collaborations}{I enjoy to collaborate with domain experts to solve real problems. So far in Neuroscience, Cosmology, Protein Design \& Imaging, Weather \& Climate Sciences.}
 % with applications downstream, with math upstream
 \cvitem{Organization}{
 	\begin{itemize}
@@ -222,26 +227,27 @@ More open-source contributions (e.g., paper implementations, teaching materials,
 	IEEE Journal of Selected Topics in Signal Processing (J-STSP)  % 2016
 }
 % Professional Services: reviewer, editor, chair, organizer?, thesis committees?
+\cvitem{Extra}{Brass Band musician, militia firefighter officer, computing systems and open-source enthusiast.}
 
-\section{Extra-Curricular}  % interests, extra-curricular activities
-% In Miscellaneous?
-\cvlistitem{Brass Band musician, playing in two bands at the Swiss national championship}
-\cvlistitem{Firefighter officer in the local militia}
-\cvlistitem{Computing systems and open-source enthusiast}
+%\section{Extra-Curricular}  % Interests, Extra-Curricular Activities
+% TODO: Keep or remove? In Miscellaneous?
+%\cvlistitem{Brass Band musician, playing in two bands at the Swiss national championship}
+%\cvlistitem{Firefighter officer in the local militia}
+%\cvlistitem{Computing systems and open-source enthusiast}
 %\cvlistitem{Interests in entrepreneurship and start-ups}
 
-%\section{Online}  % Miscellaneous, Online
-% only useful for short form without full listings (those links are otherwise prominently mentioned already)
-% but shall I maintain a short form?
+%\section{Online}
+% Only useful for short form without full listings (those links are otherwise prominently mentioned already).
+% TODO: but shall I maintain a short form?
 %\cvitemwithcomment{}{\httpslink{deff.ch}}{Publications, talks, teaching, advizing, software, projects.}
 %\cvitemwithcomment{}{\httpslink{github.com/mdeff}}{Open source contributions.}
 %\cvitemwithcomment{}{\httpslink{scholar.google.com/citations?user=Ztj2-gUAAAAJ}}{Publications.}
 %\cvitemwithcomment{}{\httpslink{twitter.com/m_deff}}{Thoughts.}
 % orcid, arxiv, zenodo, youtube, linkedin
 
+\end{document}
 
 % ---------------------------------------------------------
-
 
 % \section{Features}
 % from /usr/share/texmf-dist/tex/latex/moderncv/moderncv.cls
@@ -263,5 +269,3 @@ More open-source contributions (e.g., paper implementations, teaching materials,
 % 	\cvcolumn[0.4]{head}{content}
 % 	\cvcolumn[0.4]{head}{content}
 % \end{cvcolumns}
-
-\end{document}
