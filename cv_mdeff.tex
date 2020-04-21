@@ -13,8 +13,9 @@
 %\setmainfont{Linux Libertine O}
 %\setsansfont{Linux Biolinum O}
 
-\usepackage{social}
-% requires academicons which requires fontspec which requires XeLaTeX or LuaLaTeX
+% using academicons (for Google Scholar link) requires fontspec which requires XeLaTeX or LuaLaTeX
+\usepackage{iftex}
+\usepackage{academicons}
 
 \usepackage[scale=0.75]{geometry}  % reduce margins
 \setlength{\hintscolumnwidth}{2.3cm}  % width of the dates column
@@ -50,14 +51,23 @@
 \email{michael.defferrard@epfl.ch}
 %\email{michael@deff.ch}
 \homepage{deff.ch}
-\social[linkedin]{mdeff}
-\social[twitter]{m\_deff}
-\social[github]{mdeff}
-\social[googlescholar]{Ztj2-gUAAAAJ}
-\social[orcid]{0000-0002-6028-9024}
-\social[arxiv]{0000-0002-6028-9024}
+%\social[linkedin]{mdeff}
+%\social[twitter]{m\_deff}
+%\social[github]{mdeff}
+%\social[googlescholar]{Ztj2-gUAAAAJ}
+%\social[orcid]{0000-0002-6028-9024}
+%\social[arxiv]{0000-0002-6028-9024}
 %\social[youtube]{}
-%\extrainfo{\href{https://scholar.google.com/citations?user=Ztj2-gUAAAAJ}{Scholar}}
+\collectionadd[noicon]{socials}{
+	\protect\href{https://linkedin.com/in/mdeff}{\small\faLinkedin}~
+	\protect\href{https://twitter.com/m_deff}{\small\faTwitter}~
+	\protect\href{https://github.com/mdeff}{\small\faGithub}~
+	%\protect\href{https://orcid.org/0000-0002-6028-9024}{\small\aiOrcid}~
+	%\protect\href{https://arxiv.org/a/0000-0002-6028-9024.html}{\small\aiarXiv}~
+	\ifxetexorluatex  % icon font requires fontspec
+		\protect\href{https://scholar.google.ch/citations?user=Ztj2-gUAAAAJ}{\small\aiGoogleScholar}
+	\fi
+}
 \def\today{\ifcase\month\or  % month and year
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
