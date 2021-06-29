@@ -20,6 +20,7 @@
 \ProcessKeyvalOptions*
 
 \DeclareBibliographyCategory{selected}
+\DeclareBibliographyCategory{selectedsoftware}
 % add a selected publication with \addtocategory{selected}{<key>}
 % print selected publications with \autopubselected
 
@@ -64,6 +65,7 @@
 }
 \newcommand{\autopubsoftware}{\printbibliography[type=misc, keyword=ownpubs, resetnumbers=true, heading=none]}
 \newcommand{\autopubselected}{\printbibliography[category=selected, resetnumbers=true, heading=none]}
+\newcommand{\autopubselectedsoftware}{\printbibliography[category=selectedsoftware, resetnumbers=true, heading=none]}
 
 \nocite{*}  % include all entries (no need to explicitly cite)
 
