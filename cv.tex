@@ -26,7 +26,7 @@
 \usepackage{csquotes}  % quote with \enquote{}
 
 %\newcommand{\httpslink}[1]{\href{https://#1}{#1}}  % better footnote, worse inline
-\newcommand{\httpslink}[1]{\href{https://#1}{\texttt{#1}}}
+\renewcommand{\httpslink}[1]{\href{https://#1}{\texttt{#1}}}
 \newcommand*{\spacing}{0.5em}  % add some whitespace
 
 %-------------------------------------------------------------------------------
@@ -123,8 +123,8 @@
 
 \cventry[\spacing]{2015--now}{PhD Machine Learning}{École Polytechnique Fédérale de Lausanne (EPFL)}{}{}{%
 \begin{itemize}
-    \item Thesis: Learning better by exploiting the topology, geometry, and symmetries of the structure supporting data.
-    % \item Topics: machine learning and signal processing on graphs, symmetries and equivariance, topology and geometry.
+    \item Thesis: Leveraging topology, geometry, and symmetries for efficient Machine Learning.
+    % \item Topics: machine learning and signal processing on graphs, symmetries and equivariance, topology and geometry, graph neural networks.
         % deep learning and graphs, geometric deep learning
     \item Advized by Prof.\ Pierre Vandergheynst.
 \end{itemize}
